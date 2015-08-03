@@ -329,18 +329,20 @@ ruleTester.run("array-bracket-spacing", rule, {
             code: "var [x,y] = y",
             options: ["always"],
             ecmaFeatures: { destructuring: true },
-            errors: [{
-                message: "A space is required after '['",
-                type: "ArrayPattern",
-                line: 1,
-                column: 5
-            },
-            {
-                message: "A space is required before ']'",
-                type: "ArrayPattern",
-                line: 1,
-                column: 9
-            }]
+            errors: [
+                {
+                    message: "A space is required after '['",
+                    type: "ArrayPattern",
+                    line: 1,
+                    column: 5
+                },
+                {
+                    message: "A space is required before ']'",
+                    type: "ArrayPattern",
+                    line: 1,
+                    column: 9
+                }
+            ]
         },
         {
             code: "var [x,y ] = y",
@@ -357,18 +359,20 @@ ruleTester.run("array-bracket-spacing", rule, {
             code: "var [,,,x,,] = y",
             options: ["always"],
             ecmaFeatures: { destructuring: true },
-            errors: [{
-                message: "A space is required after '['",
-                type: "ArrayPattern",
-                line: 1,
-                column: 5
-            },
-            {
-                message: "A space is required before ']'",
-                type: "ArrayPattern",
-                line: 1,
-                column: 12
-            }]
+            errors: [
+                {
+                    message: "A space is required after '['",
+                    type: "ArrayPattern",
+                    line: 1,
+                    column: 5
+                },
+                {
+                    message: "A space is required before ']'",
+                    type: "ArrayPattern",
+                    line: 1,
+                    column: 12
+                }
+            ]
         },
         {
             code: "var [ ,,,x,,] = y",
@@ -385,18 +389,20 @@ ruleTester.run("array-bracket-spacing", rule, {
             code: "var [...horse] = y",
             options: ["always"],
             ecmaFeatures: { destructuring: true, restParams: true },
-            errors: [{
-                message: "A space is required after '['",
-                type: "ArrayPattern",
-                line: 1,
-                column: 5
-            },
-            {
-                message: "A space is required before ']'",
-                type: "ArrayPattern",
-                line: 1,
-                column: 14
-            }]
+            errors: [
+                {
+                    message: "A space is required after '['",
+                    type: "ArrayPattern",
+                    line: 1,
+                    column: 5
+                },
+                {
+                    message: "A space is required before ']'",
+                    type: "ArrayPattern",
+                    line: 1,
+                    column: 14
+                }
+            ]
         },
         {
             code: "var [...horse ] = y",

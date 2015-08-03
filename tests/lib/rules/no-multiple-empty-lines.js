@@ -21,11 +21,9 @@ var ruleTester = new RuleTester(),
         messsage: "Multiple blank lines not allowed.",
         type: "Program"
     },
-    ruleArgs = [
-        {
-            max: 2
-        }
-    ];
+    ruleArgs = [{
+        max: 2
+    }];
 
 ruleTester.run("no-multiple-empty-lines", rule, {
 
